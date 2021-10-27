@@ -13,6 +13,9 @@ jobs:
      persist-credentials: false
   - run: pwd #/home/runner/work/learn-github-actions/learn-github-actions
   - run: ls -lt
+  steps:
+  - name: checkFilse
+  - run: ls -lt
  job2222:
   runs-on: ubuntu-latest
   steps: 
