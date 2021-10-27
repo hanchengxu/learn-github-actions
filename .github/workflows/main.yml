@@ -11,11 +11,11 @@ jobs:
     with:
      ref: master
      persist-credentials: false
-  - name: shellTest
-    run: ls -lt
+  - run: pwd
+  - run: java -version
  job2222:
   runs-on: ubuntu-latest
   steps: 
-  - run: pwd
+  - run: pwd #/home/runner/work/learn-github-actions/learn-github-actions
   - run: ls -lt
   - run: npm -v
