@@ -16,7 +16,6 @@ jobs:
  job2222:
   runs-on: ubuntu-latest
   steps: 
-  - name: shellTest
   - run: pwd
   - run: ls -lt
   - run: npm -v
