@@ -1,7 +1,6 @@
 name: Test
 on:
-  watch:
-    types: started
+  workflow_dispatch:
     
 jobs:
  job1111:
