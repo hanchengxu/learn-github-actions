@@ -24,7 +24,7 @@ jobs:
   - uses: actions/download-artifact@v2
     with:
       name: my-artifact
-      path: src
+      path: src/test.txt
   - run: ls -lt
   - run: npm -v
   - run: java -version #openjdk version "11.0.11" 2021-04-20
