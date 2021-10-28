@@ -17,7 +17,7 @@ jobs:
   - uses: actions/upload-artifact@v2
     with:
      name: test-artifact
-     path: /
+     path: ./
  job2222:
   runs-on: ubuntu-latest
   needs: job1111
