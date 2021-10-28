@@ -1,0 +1,25 @@
+name: Test
+on:
+  workflow_dispatch:
+    
+jobs:
+ job1111:
+  runs-on: ubuntu-latest
+  steps: 
+  - name: Checkout
+    uses: actions/checkout@v2 # 将代码拷贝到虚机中
+    with:
+     ref: master
+     persist-credentials: false
+  - run: pwd #/home/runner/work/learn-github-actions/learn-github-actions
+  - run: ls -lt
+  steps:
+  - name: checkFilse
+  - run: ls -lt
+ job2222:
+  runs-on: ubuntu-latest
+  steps: 
+  - run: pwd #/home/runner/work/learn-github-actions/learn-github-actions
+  - run: ls -lt
+  - run: npm -v
+  - run: java -version #openjdk version "11.0.11" 2021-04-20
