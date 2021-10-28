@@ -15,7 +15,7 @@ jobs:
   - run: ls -lt
   - uses: actions/upload-artifact@v2
     with:
-     name: my-artifact
+     name: test-artifact
      path: src/test.txt
  job2222:
   runs-on: ubuntu-latest
@@ -23,7 +23,8 @@ jobs:
   - run: pwd #/home/runner/work/learn-github-actions/learn-github-actions
   - uses: actions/download-artifact@v2
     with:
-      name: my-artifact
+      name: test-artifact
+      path: ./
   - run: ls -lt
   - run: npm -v
   - run: java -version #openjdk version "11.0.11" 2021-04-20
