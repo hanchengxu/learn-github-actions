@@ -29,3 +29,13 @@ jobs:
   - run: ls -lt
   - run: npm -v
   - run: java -version #openjdk version "11.0.11" 2021-04-20
+  - name: Deploy to Server
+    uses: easingthemes/ssh-deploy@main
+    env:
+        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        ARGS: "-rltgoDzvO --delete"
+        SOURCE: "src/"
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        TARGET: ${{ secrets.REMOTE_TARGET }}
+        EXCLUDE: "/dist/, /node_modules/"
